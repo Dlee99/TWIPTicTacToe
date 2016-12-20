@@ -24,7 +24,23 @@ public class Main {
             PVP.PVP();
         }
         if (i == 2) {
-            PVE.PVE();
+            System.out.println("Would you like to play against a novice (1), an intermediate (2), or an expert (3).");
+            int t = 0;
+            int w = 0;
+            do {
+                try {
+                    t = 0;
+                    w = sc.nextInt();
+                } catch (InputMismatchException e) {
+                    w = 1;
+                    System.out.println("Please input an integer 1 to 3.");
+                }
+                if(w < 1 || w > 3){
+                    System.out.println("Please input an integer 1 to 3.");
+                    t = 1;
+                }
+            }while(t == 1);
+            PVE.PVE(w);
         }
         if (i == 3){
             EVE.EVE();

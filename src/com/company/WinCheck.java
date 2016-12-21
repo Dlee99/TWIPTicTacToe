@@ -16,6 +16,7 @@ public class WinCheck {
                     return true;
                 }
             }
+            line = "";
         }
         for(int u = 0; u < 3; u++){
             for(int i = 0; i < 3; i++){
@@ -29,6 +30,7 @@ public class WinCheck {
                     return true;
                 }
             }
+            line = "";
         }
         String d1, d2;
         d1 = a[0][0] + a[1][1] + a[2][2];

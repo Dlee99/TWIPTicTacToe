@@ -35,41 +35,81 @@ public class PVE {
         System.out.println(
                 board[0][0] + " | " + board[1][0] + " | " + board[2][0] + "\n" + "----------" + "\n" +
                         board[0][1] + " | " + board[1][1] + " | " + board[2][1] + "\n" + "----------" + "\n" +
-                        board[0][1] + " | " + board[1][2] + " | " + board[2][2] + "\n");
+                        board[0][2] + " | " + board[1][2] + " | " + board[2][2] + "\n");
         do {
             switch (w) {
                 case 1:
-                    board = NoviceAI.NoviceAI(board, computer);
-                    System.out.println(
-                            board[0][0] + " | " + board[1][0] + " | " + board[2][0] + "\n" + "----------" + "\n" +
-                            board[0][1] + " | " + board[1][1] + " | " + board[2][1] + "\n" + "----------" + "\n" +
-                            board[0][1] + " | " + board[1][2] + " | " + board[2][2] + "\n");
-                    if(!WinCheck.WinCheck(board)){
+                    if(player.equals("O")) {
+                        board = NoviceAI.NoviceAI(board, computer);
+                        System.out.println(
+                                board[0][0] + " | " + board[1][0] + " | " + board[2][0] + "\n" + "----------" + "\n" +
+                                        board[0][1] + " | " + board[1][1] + " | " + board[2][1] + "\n" + "----------" + "\n" +
+                                        board[0][2] + " | " + board[1][2] + " | " + board[2][2] + "\n");
+                        if (!WinCheck.WinCheck(board)) {
+                            board = PlayerMove.PlayerMove(board, player);
+                        }
+                    }
+                    else{
                         board = PlayerMove.PlayerMove(board, player);
+                        if (!WinCheck.WinCheck(board)) {
+                            board = NoviceAI.NoviceAI(board, computer);
+                            System.out.println(
+                                    board[0][0] + " | " + board[1][0] + " | " + board[2][0] + "\n" + "----------" + "\n" +
+                                            board[0][1] + " | " + board[1][1] + " | " + board[2][1] + "\n" + "----------" + "\n" +
+                                            board[0][2] + " | " + board[1][2] + " | " + board[2][2] + "\n");
+                        }
                     }
                     break;
                 case 2:
-                    board = IntermediateAI.IntermediateAI(board, computer);
-                    System.out.println(
-                            board[0][0] + " | " + board[1][0] + " | " + board[2][0] + "\n" + "----------" + "\n" +
-                            board[0][1] + " | " + board[1][1] + " | " + board[2][1] + "\n" + "----------" + "\n" +
-                            board[0][1] + " | " + board[1][2] + " | " + board[2][2] + "\n");
-                    if(!WinCheck.WinCheck(board)){
+                    if(player.equals("O")) {
+                        board = IntermediateAI.IntermediateAI(board, computer);
+                        System.out.println(
+                                board[0][0] + " | " + board[1][0] + " | " + board[2][0] + "\n" + "----------" + "\n" +
+                                        board[0][1] + " | " + board[1][1] + " | " + board[2][1] + "\n" + "----------" + "\n" +
+                                        board[0][2] + " | " + board[1][2] + " | " + board[2][2] + "\n");
+                        if (!WinCheck.WinCheck(board)) {
+                            board = PlayerMove.PlayerMove(board, player);
+                        }
+                    }
+                    else{
                         board = PlayerMove.PlayerMove(board, player);
+                        if (!WinCheck.WinCheck(board)) {
+                            board = IntermediateAI.IntermediateAI(board, computer);
+                            System.out.println(
+                                    board[0][0] + " | " + board[1][0] + " | " + board[2][0] + "\n" + "----------" + "\n" +
+                                            board[0][1] + " | " + board[1][1] + " | " + board[2][1] + "\n" + "----------" + "\n" +
+                                            board[0][2] + " | " + board[1][2] + " | " + board[2][2] + "\n");
+                        }
                     }
                     break;
                 case 3:
-                    board = ExpertAI.ExpertAI(board, computer);
-                    System.out.println(
-                            board[0][0] + " | " + board[1][0] + " | " + board[2][0] + "\n" + "----------" + "\n" +
-                            board[0][1] + " | " + board[1][1] + " | " + board[2][1] + "\n" + "----------" + "\n" +
-                            board[0][1] + " | " + board[1][2] + " | " + board[2][2] + "\n");
-                    if(!WinCheck.WinCheck(board)){
+                    if(player.equals("O")) {
+                        board = ExpertAI.ExpertAI(board, computer);
+                        System.out.println(
+                                board[0][0] + " | " + board[1][0] + " | " + board[2][0] + "\n" + "----------" + "\n" +
+                                        board[0][1] + " | " + board[1][1] + " | " + board[2][1] + "\n" + "----------" + "\n" +
+                                        board[0][2] + " | " + board[1][2] + " | " + board[2][2] + "\n");
+                        if (!WinCheck.WinCheck(board)) {
+                            board = PlayerMove.PlayerMove(board, player);
+                        }
+                    }
+                    else{
                         board = PlayerMove.PlayerMove(board, player);
+                        if (!WinCheck.WinCheck(board)) {
+                            board = ExpertAI.ExpertAI(board, computer);
+                            System.out.println(
+                                    board[0][0] + " | " + board[1][0] + " | " + board[2][0] + "\n" + "----------" + "\n" +
+                                            board[0][1] + " | " + board[1][1] + " | " + board[2][1] + "\n" + "----------" + "\n" +
+                                            board[0][2] + " | " + board[1][2] + " | " + board[2][2] + "\n");
+                        }
                     }
                     break;
             }
         }while(!WinCheck.WinCheck(board));
+        System.out.println(
+                board[0][0] + " | " + board[1][0] + " | " + board[2][0] + "\n" + "----------" + "\n" +
+                board[0][1] + " | " + board[1][1] + " | " + board[2][1] + "\n" + "----------" + "\n" +
+                board[0][2] + " | " + board[1][2] + " | " + board[2][2] + "\n");
         System.out.println(WinCheck.winner + " has won Tic-Tac-Toe!");
     }
 

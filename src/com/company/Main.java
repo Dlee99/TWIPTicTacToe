@@ -31,7 +31,7 @@ public class Main {
                 try {
                     t = 0;
                     w = sc.nextInt();
-                } catch (InputMismatchException e) {
+                } catch (IndexOutOfBoundsException e) {
                     w = 1;
                     System.out.println("Please input an integer 1 to 3.");
                 }

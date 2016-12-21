@@ -7,20 +7,24 @@ public class PlayerMove {
         int u;
         int i = 0;
         do {
-            try {
-                u = 0;
-                i = sc.nextInt();
-            } catch (InputMismatchException e) {
-                u = 1;
-                System.out.println("Please input an integer 1 to 9.");
+            while(true) {
+                System.out.print("Slot: ");
+                if (sc.hasNextInt()) {
+                    i = sc.nextInt();
+                    break;
+                } else {
+                    sc.next();
+                    System.out.println("Please input an integer 1 to 9.");
+                }
             }
-            if(i < 1 || i > 9){
-                System.out.println("Please input an integer 1 to 9.");
-                u = 1;
-            }
-            i = i - 1;
+            u = 0;
+            i--;
             int i1 = i % 3, i2 = i / 3 ;
-            if(!a[i1][i2].equals(" ")){
+            if (i < 0 || i > 8) {
+                System.out.println("Please input an integer 1 to 9.");
+                u = 1;
+            }
+            else if(!a[i1][i2].equals(" ")){
                 System.out.println("That space is not empty.  Please input a new one.");
                 u = 1;
             }

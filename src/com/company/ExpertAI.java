@@ -233,18 +233,6 @@ public class ExpertAI {
         } else if (m4 >= m1 && m4 >= m2 && m4 >= m3 && m4 >= m0 && m4 >= m5 && m4 >= m6 && m4 >= m7 && m4 >= m8 && board[1][1].equals(" ")) {
             board[1][1] = b;
             return board;
-        } else if (m0 >= m1 && m0 >= m2 && m0 >= m3 && m0 >= m4 && m0 >= m5 && m0 >= m6 && m0 >= m7 && m0 >= m8 && board[0][0].equals(" ")) {
-            board[0][0] = b;
-            return board;
-        } else if (m8 >= m1 && m8 >= m2 && m8 >= m3 && m8 >= m4 && m8 >= m5 && m8 >= m6 && m8 >= m7 && m8 >= m0 && board[2][2].equals(" ")) {
-            board[2][2] = b;
-            return board;
-        } else if (m2 >= m1 && m2 >= m0 && m2 >= m3 && m2 >= m4 && m2 >= m5 && m2 >= m6 && m2 >= m7 && m2 >= m8 && board[2][0].equals(" ")) {
-            board[2][0] = b;
-            return board;
-        } else if (m6 >= m1 && m6 >= m2 && m6 >= m3 && m6 >= m4 && m6 >= m5 && m6 >= m0 && m6 >= m7 && m6 >= m8 && board[0][2].equals(" ")) {
-            board[0][2] = b;
-            return board;
         } else if (m3 >= m1 && m3 >= m2 && m3 >= m0 && m3 >= m4 && m3 >= m5 && m3 >= m6 && m3 >= m7 && m3 >= m8 && board[0][1].equals(" ")) {
             board[0][1] = b;
             return board;
@@ -256,6 +244,18 @@ public class ExpertAI {
             return board;
         } else if (m5 >= m1 && m5 >= m2 && m5 >= m3 && m5 >= m4 && m5 >= m0 && m5 >= m6 && m5 >= m7 && m5 >= m8 && board[2][1].equals(" ")) {
             board[2][1] = b;
+            return board;
+        } else if (m0 >= m1 && m0 >= m2 && m0 >= m3 && m0 >= m4 && m0 >= m5 && m0 >= m6 && m0 >= m7 && m0 >= m8 && board[0][0].equals(" ")) {
+            board[0][0] = b;
+            return board;
+        } else if (m8 >= m1 && m8 >= m2 && m8 >= m3 && m8 >= m4 && m8 >= m5 && m8 >= m6 && m8 >= m7 && m8 >= m0 && board[2][2].equals(" ")) {
+            board[2][2] = b;
+            return board;
+        } else if (m2 >= m1 && m2 >= m0 && m2 >= m3 && m2 >= m4 && m2 >= m5 && m2 >= m6 && m2 >= m7 && m2 >= m8 && board[2][0].equals(" ")) {
+            board[2][0] = b;
+            return board;
+        } else if (m6 >= m1 && m6 >= m2 && m6 >= m3 && m6 >= m4 && m6 >= m5 && m6 >= m0 && m6 >= m7 && m6 >= m8 && board[0][2].equals(" ")) {
+            board[0][2] = b;
             return board;
         }
         else{

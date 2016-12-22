@@ -51,6 +51,7 @@ public class IntermediateAI {
             }
         }
         String d1 = board[0][0] + board[1][1] + board[2][2];
+        String d2 = board[2][0] + board[1][1] + board[0][2];
         if(d1.equals(c1)){
             board[2][2] = b;
             return board;
@@ -63,7 +64,6 @@ public class IntermediateAI {
             board[0][0] = b;
             return board;
         }
-        String d2 = board[2][0] + board[1][1] + board[0][2];
         if(d2.equals(c1)){
             board[0][2] = b;
             return board;
@@ -136,16 +136,14 @@ public class IntermediateAI {
             board[2][0] = b;
             return board;
         }
-        else {
-            Random rd = new Random();
-            String[][] aa = a;
-            while (0 == 0) {
-                int i1 = rd.nextInt(3), i2 = rd.nextInt(3);//generate random tic-tac-toe slot
-                if (a[i1][i2].equals(" ")) {
-                    aa[i1][i2] = b; //put the computer's mark in that slot
-                    return aa;
-                }
+        Random rd = new Random();
+        String[][] aa = a;
+        while (0 == 0) {
+            int i1 = rd.nextInt(3), i2 = rd.nextInt(3);//generate random tic-tac-toe slot
+            if (a[i1][i2].equals(" ")) {
+                aa[i1][i2] = b; //put the computer's mark in that slot
+                return aa;
             }
         }
+        }
     }
-}

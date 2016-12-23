@@ -135,6 +135,10 @@ public class ExpertAI {
             for (int u = 0; u < board.length; u++) {
                 line = line + board[i][u];
             }
+            if (line.equals(" X ")){
+                m3--;
+                m5--;
+            }
             if (line.equals(c7)) {
                 if (i == 0) {
                     m1++;
@@ -174,6 +178,10 @@ public class ExpertAI {
             String line = "";
             for (int i = 0; i < board.length; i++) {
                 line = line + board[i][u];
+            }
+            if (line.equals(" X ")){
+                m1--;
+                m7--;
             }
             if (line.equals(c7)) {
                 if (u == 0) {

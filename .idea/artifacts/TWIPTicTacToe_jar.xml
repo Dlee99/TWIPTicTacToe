@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="TWIPTicTacToe:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/TWIPTicTacToe_jar</output-path>
+    <root id="archive" name="TWIPTicTacToe.jar">
+      <element id="module-output" name="TWIPTicTacToe" />
+    </root>
+  </artifact>
+</component>

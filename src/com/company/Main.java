@@ -45,6 +45,7 @@ public class Main {
         if (i == 3){
             EVE.EVE();
         }
-        sc.nextLine();
+        System.out.println("Thanks for playing!");
+        String ww = sc.nextLine();
     }
 }

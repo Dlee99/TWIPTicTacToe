@@ -48,7 +48,7 @@ public class Main {
             }
             System.out.println("Thanks for playing!");
             System.out.println("Would you like to play again? (Y) (N)");
-            String w = sc.nextLine().toUpperCase();
+            String w = sc.next().toUpperCase();
             if (w.equals("Y")) {
             } else {
                 break;
